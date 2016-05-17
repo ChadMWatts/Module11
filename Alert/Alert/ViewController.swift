@@ -13,7 +13,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-    }
     
     let alertController = UIAlertController(title: "Alert!", message: "This is an alert!", preferredStyle: .Alert)
     
@@ -33,9 +32,10 @@ class ViewController: UIViewController {
     alertController.addAction(defaultAction)
     alertController.addAction(okAction)
     
+    self.presentViewController(alertController, animated: true, completion: nil)
     
-    {
-    
+}
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
