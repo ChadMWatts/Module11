@@ -15,7 +15,7 @@ extension Vehicle {
     
     mutating func startCar() {
         
-        if isMoving == false {
+        if isMoving {
             isMoving = true
             print("Vehicle is moving!")
             
@@ -24,7 +24,7 @@ extension Vehicle {
     
     mutating func stopCar() {
     
-    if isMoving == true {
+    if !isMoving {
     isMoving = false
     print("Vehicle has Stopped!")
     
@@ -68,6 +68,8 @@ print(duramax.isMoving)
 print(duramax.startCar())
 print(duramax.stopCar())
 print(duramax.speed)
+duramax.stopCar()
+duramax.startCar()
 
 var cS300 = lexus(speed: 0.0, isMoving: false, turbo: true)
 
